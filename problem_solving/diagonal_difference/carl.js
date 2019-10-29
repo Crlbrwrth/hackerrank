@@ -10,8 +10,6 @@ function diagonalDifference(arr) {
     });
     return sum1 > sum2 ? sum1 - sum2 : sum2 - sum1;
 
-    //UNNECESSARILY COMPLICATED SOLUTION
-
     // let width = arr[0].length;
     // let diag1 = [];
     // let diag2 = [];
