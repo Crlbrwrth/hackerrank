@@ -13,7 +13,9 @@ function Rectangle(a, b) {
 // COUNT OBJECTS
 
 function getCount(objects) {
-    return objects.filter(o => o.x === o.y).length;
+    return objects.filter(o => {
+        o.x === o.y;
+    }).length;
 }
 
 // CLASSES
