@@ -5,3 +5,4 @@ function gradingStudents(grades) {
         return e;
     });
 }
+console.log(gradingStudents([40, 50, 55]));
