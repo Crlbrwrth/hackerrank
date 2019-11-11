@@ -15,4 +15,4 @@ function chocolateFeast(n, c, m) {
     return chocolateBars;
 }
 
-chocolateFeast(10, 2, 2);
+console.log(chocolateFeast(10, 2, 2));
