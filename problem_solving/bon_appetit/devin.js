@@ -5,9 +5,7 @@ function bonAppetit(bill, k, b) {
 
     let annsBill = (mealCost - bill[k]) / 2;
 
-    if (annsBill === b) {
-        console.log("Bon Appetit");
-    } else {
-        console.log(b - annsBill);
-    }
+    return annsBill === b
+        ? console.log("Bon Appetit")
+        : console.log(b - annsBill);
 }
