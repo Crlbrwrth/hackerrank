@@ -1,29 +1,32 @@
+// Complete the jumpingOnClouds function below.
 function jumpingOnClouds(c, k) {
+    // C = CLouds , K = Jump Size;
     let energy = 100;
-    let currentCloud = 1;
+    let loop = 0;
 
-    console.log("Cloud array: ", c.length);
-    console.log("Jump length: ", k);
+    for (let i = 0 + k; energy > 0; i += k) {
+        if (i > c.length - 1) {
+            i = i - c.length;
+            loop++;
+            if (c[i] === 1) {
+                energy -= 3;
+            }
 
-    for (let i = 0; i <= c.length; i += k) {
-        if (c[i] === 0) {
-            energy--;
-            currentCloud += k;
-        } else if (c[i] === 1) {
-            energy -= 3;
-            currentCloud += k;
+            if (c[i] === 0) {
+                energy -= 1;
+            }
+        } else {
+            if (c[i] === 1) {
+                energy -= 3;
+            }
+
+            if (c[i] === 0) {
+                energy -= 1;
+            }
         }
 
-        console.log("Cloud after move: ", currentCloud);
-
-        if (i > c.length && currentCloud - c.length + k === c.length) {
+        if (i === 0 && loop > 0) {
             return energy;
-        } else if (i > c.length && currentCloud - c.length + k !== c.length) {
-            i = currentCloud - c.length;
         }
     }
-
-    return energy;
 }
-
-console.log(jumpingOnClouds([0, 0, 0, 0, 0], 3));
